@@ -40,7 +40,7 @@ export function WaitlistForm() {
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [errorMessage, setErrorMessage] = useState('');
 
-  const API_URL =  'http://localhost:3001';
+  const API_URL =  'https://apidevelop.vercel.app';
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();

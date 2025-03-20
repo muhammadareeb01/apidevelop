@@ -10,14 +10,14 @@ import crypto from "crypto";
 dotenv.config();
 
 const app = express();
-const port = process.env.PORT || 3001;
+const port = 'https://apidevelop.vercel.app';
 
 // Initialize Supabase
 const supabase = createClient(
   "https://yhyaslxqzwqptknmybqa.supabase.co",'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InloeWFzbHhxendxcHRrbm15YnFhIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTczOTM0MjQ3MSwiZXhwIjoyMDU0OTE4NDcxfQ.MrVagZRK4IM5XsefxgOYc93LMXxX81qe94mFETkuRNs');
 const resend = new Resend("re_epCkTUjB_8VatRdLBoWDFKDU16uqYkz7g");
 app.use(cors({
-  origin: "http://localhost:5173",
+  origin: "https://apidevelop.vercel.app",
   methods: ["POST"],
 }));
 app.use(express.json());
@@ -154,5 +154,5 @@ app.post("/api/test", async (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`✅ Server running on http://localhost:${port}`);
+  console.log(`✅ Server running on ${port}`);
 });
