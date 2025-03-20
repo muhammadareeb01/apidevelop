@@ -10,7 +10,7 @@ import crypto from "crypto";
 dotenv.config();
 
 const app = express();
-const port = process.env.PORT || 3001;
+const port = 'https://apidevelop.vercel.app';
 
 // Initialize Supabase
 const supabase = createClient(
